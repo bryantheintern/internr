@@ -173,5 +173,3 @@ Insert \"%>%\": CTRL + SHIFT + M
 			")
 }
 
-
-keyboard()
