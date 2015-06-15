@@ -2,11 +2,18 @@
 % Please edit documentation in R/tricks.R
 \name{what}
 \alias{what}
-\title{Reminders of useful code that couldn't easily be written into functions, were already only one function, and shortcuts.}
+\title{Reminders of useful code that couldn't easily be written into functions or were already only one function.}
 \usage{
 what()
 }
-\description{
-Reminders of useful code that couldn't easily be written into functions, were already only one function, and shortcuts.
+\arguments{
+\item{None}{just open and close parentheses}
 }
+\description{
+Reminders of useful code that couldn't easily be written into functions or were already only one function.
+}
+\examples{
+what()
+}
+\keyword{dictionary}
 

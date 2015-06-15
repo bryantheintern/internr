@@ -118,7 +118,7 @@ noNA  <- function(df,zero=TRUE){
 }
 
 #'Reminders of useful code that couldn't easily be written into functions or were already only one function.
-#'@param
+#'@param None just open and close parentheses
 #'@keywords dictionary
 #'@export
 #'@examples
@@ -149,7 +149,7 @@ what  <- function() {
 	)
 }
 #'Useful RStudio keyboard shortcuts
-#'@param
+#'@param None just open and close parentheses
 #'@keywords dictionary
 #'@export
 #'@examples
@@ -168,8 +168,6 @@ Use selection for find: Select something, CTRL + F3
 Get list of R's guesses of how to finish a word: TAB
 Insert \" <- \": ALT + -
 Insert \"%>%\": CTRL + SHIFT + M
-
-
 			")
 }
 
