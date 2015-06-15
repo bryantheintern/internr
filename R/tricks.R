@@ -6,11 +6,11 @@
 #' @keywords files
 #' @export
 #' @examples
-#' bigfile()
+#' big.csv()
 #' 
 
 
-bigfile <- function(location,header=TRUE){
+big.csv <- function(location,header=TRUE){
 s<-list.files(path=location,pattern="csv",full.names=TRUE)
 
 t<-lapply(s,read.csv)
@@ -28,7 +28,7 @@ u<-do.call(rbind,t)
 #'@examples
 #'coolpairs()
 
-coolpairs <- function(x,upper=FALSE){
+cor.pairs <- function(x,upper=FALSE){
 	panel.cor <- function(x, y, digits=2, prefix="", cex.cor)
 	{
 		usr <- par("usr"); on.exit(par(usr))
@@ -57,6 +57,96 @@ else pairs(x,upper.panel=panel.cor)
 
 
 '%not in%' <- function (x,table) is.na(match(x,table,nomatch=NA_integer_))
+
+
+#'Mode function: find the mode of a set, functions just like mean or sum functions
+#'@param x the list of things you want to find the mode of.
+#'@keywords stats
+#'@export
+#'@examples
+#'
+#'mode()
+
+mode <- function(x){
+	as.numeric(names(sort(-table(x))) [1])
+}
+
+
+#'Read in a bunch of .xlsx files and spit out a csv
+#'@param inpath Where is the folder you want to pull the files from? Make sure they have the same columns and there is nothing extra in the folder
+#'@keywords xlsx
+#'@export
+#'@examples
+#'
+#'big.xlsx()
+
+big.xlsx <- function(inpath, out=TRUE, outpath) {
+	require(openxlsx)
+	
+	y<-list.files(inpath,pattern="xlsx",full.names=TRUE)
+	z<-lapply(y,read.xlsx)
+	
+	if(out==TRUE){
+		v<-do.call(rbind,z)		
+		write.csv(v,outpath)
+	}
+	else{v<- do.call(rbind,z)
+			 v}
+}
+
+#'Reminders of useful code that couldn't easily be written into functions, were already only one function, and shortcuts.
+#'@param No parameters
+#'@keywords dictionary
+#'@export
+#'@examples
+#'
+#'what()
+
+what  <- function() {
+	cat("Normality Plot: If line is relatively straight, then the data is normal.
+
+				qqplot(rstudent(model))\n
+------------------------------------------------			
+Time taken: Insert at beginning and end of code.
+
+				start.time <- Sys.time()     
+				##code
+				end.time <- Sys.time()
+				time.taken <- end.time - start.time\n
+------------------------------------------------			
+Left and Right Excel Equivalents:
+
+				L <- str_sub(MyData$V4,1,4)
+				R <- str_sub(MyData$V4,-4,-1)\n
+------------------------------------------------
+			
+			
+			
+			"			
+	)
+}
+
+
+#' Eliminate NA's
+#' @param df The data frame you want to take the NAs out of.
+#' @keywords NA
+#' @export
+#' @examples
+#' 
+#' NoNA()
+
+noNA  <- function(df,zero=TRUE){
+	require(dplyr)
+	if(zero==TRUE){ #Replace all NAs with 0
+		df[is.na(df)] <- 0
+		
+	}
+	else{          #Delete any line with an NA
+		df <- df %>%
+			na.omit()
+	}
+	df
+}
 
 
 
