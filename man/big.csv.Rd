@@ -6,11 +6,12 @@
 Take a bunch of files of the same format(CSV) from one folder and combine (rbind) them
 into one dataframe.}
 \usage{
-big.csv(location, header = TRUE)
+big.csv(location, header = TRUE, stringsAsFactors = FALSE)
 }
 \arguments{
 \item{location}{Select folder location where the files are. Make sure those files are the only ones in the folder
-header Do the files have a header? Defaulted to TRUE}
+header Do the files have a header? Defaulted to TRUE
+stringsAsFactors Do you want the strings converted to factors? Defaulted to FALSE}
 }
 \description{
 Make a Big File out of a bunch of tiny ones.
@@ -18,7 +19,7 @@ Take a bunch of files of the same format(CSV) from one folder and combine (rbind
 into one dataframe.
 }
 \examples{
-big.csv()
+big.csv("S:\\\\Key Retailing\\\\Active Projects and Teams\\\\Order Evolution\\\\Intern\\\\Bryan\\\\Movement Data")
 }
 \keyword{files}
 

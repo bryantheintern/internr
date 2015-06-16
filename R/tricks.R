@@ -1,20 +1,23 @@
 #'Make a Big File out of a bunch of tiny ones.
 #'Take a bunch of files of the same format(CSV) from one folder and combine (rbind) them
 #' into one dataframe.
-#' @param location Select folder location where the files are. Make sure those files are the only ones in the folder
+#' @param
+#' location Select folder location where the files are. Make sure those files are the only ones in the folder
 #' header Do the files have a header? Defaulted to TRUE
+#' stringsAsFactors Do you want the strings converted to factors? Defaulted to FALSE
 #' @keywords files
 #' @export
 #' @examples
-#' big.csv()
+#' big.csv("S:\\Key Retailing\\Active Projects and Teams\\Order Evolution\\Intern\\Bryan\\Movement Data")
 #'
 
 
-big.csv <- function(location,header=TRUE){
+big.csv <- function(location,header=TRUE,stringsAsFactors=FALSE){
 	s<-list.files(path=location,pattern="csv",full.names=TRUE)
-
-	t<-lapply(s,read.csv)
-
+	if (stringsAsFactors==FALSE){
+		t<-lapply(s,read.csv,stringsAsFactors=FALSE)
+	}
+	else{lapply(s,read.csv,stringsAsFactors=TRUE)}
 	u<-do.call(rbind,t)
 }
 
@@ -119,14 +122,6 @@ noNA  <- function(df,zero=TRUE){
 
 
 
-
-
-
-
-
-
-
-
 #'Reminders of useful code that couldn't easily be written into functions or were already only one function.
 #'@param None just open and close parentheses
 #'@keywords dictionary
@@ -171,6 +166,10 @@ what  <- function() {
 			library(stringr)
 			df$Unique.ID <- with(df,(str_c(Date, Store, Catalog, Base.GTIN.Number, character(0))))
 
+			------------------------------------------------
+			Convert to data.frame
+
+			df.analysis <- as.data.frame(df.analysis)
 			"
 	)
 }
