@@ -4,5 +4,9 @@ Version: 0.0.0.9000
 Authors@R: person("Bryan", "Parry", email = "bryan.parry@kroger.com", role = c("cre"))
 Description: Data manipulation and graphics tools stolen from people who pass code around the office.
 Depends: R (>= 3.2.0)
+Imports:
+    dplyr,
+		openxlsx,
+		stringr
 License: GPL-2
 LazyData: true

@@ -29,7 +29,7 @@ big.csv <- function(location,header=TRUE,stringsAsFactors=FALSE){
 #'@keywords plot
 #'@export
 #'@examples
-#'coolpairs()
+#'coolpairs(mtcars[1:4])
 
 cor.pairs <- function(x,upper=FALSE){
 	panel.cor <- function(x, y, digits=2, prefix="", cex.cor)
@@ -51,24 +51,28 @@ cor.pairs <- function(x,upper=FALSE){
 #'
 #'This function serves the opposite function of %in% since R can't figure out !%in%
 #'Found on Stack Overflow. Has the same syntax as %in% (See ?match)
-#'@param x the thing you want to filter out
+#'@param
+#'x the thing you want to filter out
 #'table where you want to filter it out of
 #'@keywords filter
 #'@export
 #'@examples
-#'%not in%
+#'
+#'5 %not in% c(1,2,3,4,5)
+#'5 %not in% c(1,2,3,4)
 
 
 '%not in%' <- function (x,table) is.na(match(x,table,nomatch=NA_integer_))
 
 
 #'Mode function: find the mode of a set, functions just like mean or sum functions
-#'@param x the list of things you want to find the mode of.
+#'@param
+#'x the list of things you want to find the mode of.
 #'@keywords stats
 #'@export
 #'@examples
 #'
-#'mode()
+#'mode(c(1,4,2,5,7,6,45,8,9,8,6,5,4,6,67,7,4,2,4,65,6))
 
 mode <- function(x){
 	as.numeric(names(sort(-table(x))) [1])
@@ -80,7 +84,7 @@ mode <- function(x){
 #'@keywords xlsx
 #'@export
 #'@examples
-#'
+#'@
 #'big.xlsx()
 
 big.xlsx <- function(inpath, out=TRUE, outpath) {
@@ -105,7 +109,8 @@ big.xlsx <- function(inpath, out=TRUE, outpath) {
 #' @export
 #' @examples
 #'
-#' NoNA()
+#' noNA(c(1,2,NA,4,5))
+#' noNA(c(1,2,NA,4,5),zero=FALSE)
 
 noNA  <- function(df,zero=TRUE){
 	require(dplyr)
