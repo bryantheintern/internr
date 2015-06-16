@@ -117,6 +117,16 @@ noNA  <- function(df,zero=TRUE){
 	df
 }
 
+
+
+
+
+
+
+
+
+
+
 #'Reminders of useful code that couldn't easily be written into functions or were already only one function.
 #'@param None just open and close parentheses
 #'@keywords dictionary
@@ -126,7 +136,8 @@ noNA  <- function(df,zero=TRUE){
 #'what()
 
 what  <- function() {
-	cat("Normality Plot: If line is relatively straight, then the data is normal.
+	cat("
+			Normality Plot: If line is relatively straight, then the data is normal.
 
 			qqplot(rstudent(model))\n
 			------------------------------------------------
@@ -142,12 +153,30 @@ what  <- function() {
 			L <- str_sub(MyData$V4,1,4)
 			R <- str_sub(MyData$V4,-4,-1)\n
 			------------------------------------------------
-			Convert dates into the standard R Date format: The format argument should reflect the *starting format* of the date.
+			Convert dates into the standard R Date format:
+
+			The format argument should reflect the *starting format* of the date.
 			Date <- as.Date(Date,format=\"%m/%d/%Y\")\n
 			------------------------------------------------
+			Save and Load RDS:
+
+			library(dplyr)
+			## Save the object
+			saveRDS(m3, \"Sample Merge Data.rds\")
+			## Load the object
+			v2 <- readRDS(\"BOHAdj.rds\")
+			------------------------------------------------
+			Concatenate columns to create Unique ID:
+
+			library(stringr)
+			df$Unique.ID <- with(df,(str_c(Date, Store, Catalog, Base.GTIN.Number, character(0))))
+
 			"
 	)
 }
+
+what()
+
 #'Useful RStudio keyboard shortcuts
 #'@param None just open and close parentheses
 #'@keywords dictionary
@@ -168,6 +197,7 @@ Use selection for find: Select something, CTRL + F3
 Get list of R's guesses of how to finish a word: TAB
 Insert \" <- \": ALT + -
 Insert \"%>%\": CTRL + SHIFT + M
+Define user function where the cursor is: CTRL + ALT + F
 			")
 }
 
