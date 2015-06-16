@@ -13,7 +13,7 @@ mode(x)
 Mode function: find the mode of a set, functions just like mean or sum functions
 }
 \examples{
-mode()
+mode(c(1,4,2,5,7,6,45,8,9,8,6,5,4,6,67,7,4,2,4,65,6))
 }
 \keyword{stats}
 

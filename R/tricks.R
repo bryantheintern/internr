@@ -1,3 +1,28 @@
+#'Directory
+#'@param
+#'big.csv
+#'cor.pairs
+#'%not in%
+#'mode
+#'big.xlsx
+#'noNA
+#'what
+#'keyboard
+#'
+#'@keywords directory
+#'@export
+#'@examples
+#'directory()
+#'
+
+directory<- function(){
+	cat("
+	See ?directory
+
+	")
+}
+directory()
+
 #'Make a Big File out of a bunch of tiny ones.
 #'Take a bunch of files of the same format(CSV) from one folder and combine (rbind) them
 #' into one dataframe.
@@ -57,7 +82,6 @@ cor.pairs <- function(x,upper=FALSE){
 #'@keywords filter
 #'@export
 #'@examples
-#'
 #'5 %not in% c(1,2,3,4,5)
 #'5 %not in% c(1,2,3,4)
 
@@ -84,7 +108,7 @@ mode <- function(x){
 #'@keywords xlsx
 #'@export
 #'@examples
-#'@
+#'
 #'big.xlsx()
 
 big.xlsx <- function(inpath, out=TRUE, outpath) {
@@ -179,7 +203,6 @@ what  <- function() {
 	)
 }
 
-what()
 
 #'Useful RStudio keyboard shortcuts
 #'@param None just open and close parentheses

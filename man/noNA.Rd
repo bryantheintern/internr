@@ -13,7 +13,8 @@ noNA(df, zero = TRUE)
 Eliminate NA's
 }
 \examples{
-NoNA()
+noNA(c(1,2,NA,4,5))
+noNA(c(1,2,NA,4,5),zero=FALSE)
 }
 \keyword{NA}
 
