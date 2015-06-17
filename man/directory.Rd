@@ -7,13 +7,21 @@
 directory()
 }
 \arguments{
-\item{big.csv}{cor.pairs
-%not in%
-mode
-big.xlsx
-noNA
-what
-keyboard}
+\item{big.csv}{Read in a folder of .CSVs and rbind them into one big data frame.}
+
+\item{cor.pairs}{Make a pairs plot but with the corresponding correlations shown.}
+
+\item{%not}{in% Opposite of %in%. Test if something is in something else or not.}
+
+\item{mode}{Find the number of the highest frequency.}
+
+\item{big.xlsx}{Same as big.csv but for .xlsx files. Also gives option to write resulting data frame into a .CSV.}
+
+\item{noNA}{Remove NAs from a data frame, either by replacing them with '0's or by deleting rows.}
+
+\item{what}{List of code chunks that couldn't easily be converted into one function or were already one function.}
+
+\item{keyboard}{RStudio Keyboard shortcuts that may be useful.}
 }
 \description{
 Directory

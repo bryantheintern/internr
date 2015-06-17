@@ -8,6 +8,10 @@ big.xlsx(inpath, out = TRUE, outpath)
 }
 \arguments{
 \item{inpath}{Where is the folder you want to pull the files from? Make sure they have the same columns and there is nothing extra in the folder}
+
+\item{out}{Should the function write out a csv when finished?}
+
+\item{outpath}{If out is TRUE, then where should it be written?}
 }
 \description{
 Read in a bunch of .xlsx files and spit out a csv
