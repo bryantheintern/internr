@@ -6,9 +6,6 @@
 \usage{
 directory()
 }
-\arguments{
-\item{none}{}
-}
 \description{
 Directory
 }

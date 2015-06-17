@@ -6,9 +6,6 @@
 \usage{
 what()
 }
-\arguments{
-\item{None}{just open and close parentheses}
-}
 \description{
 Reminders of useful code that couldn't easily be written into functions or were already only one function.
 }

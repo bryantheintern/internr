@@ -1,5 +1,4 @@
 #'Directory
-#'@param none
 #'@keywords directory
 #'@export
 #'@examples
@@ -18,7 +17,6 @@ directory<- function(){
 			keyboard RStudio Keyboard shortcuts that may be useful.
 	")
 }
-directory()
 
 #'Make a Big File out of a bunch of tiny ones.
 #'Take a bunch of files of the same format(CSV) from one folder and combine (rbind) them
@@ -149,7 +147,6 @@ noNA  <- function(df,zero=TRUE){
 
 
 #'Reminders of useful code that couldn't easily be written into functions or were already only one function.
-#'@param None just open and close parentheses
 #'@keywords dictionary
 #'@export
 #'@examples
@@ -202,7 +199,6 @@ what  <- function() {
 
 
 #'Useful RStudio keyboard shortcuts
-#'@param None just open and close parentheses
 #'@keywords dictionary
 #'@export
 #'@examples

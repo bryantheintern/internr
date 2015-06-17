@@ -6,9 +6,6 @@
 \usage{
 keyboard()
 }
-\arguments{
-\item{None}{just open and close parentheses}
-}
 \description{
 Useful RStudio keyboard shortcuts
 }
