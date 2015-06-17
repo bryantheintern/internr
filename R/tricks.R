@@ -227,4 +227,3 @@ Insert \"%>%\": CTRL + SHIFT + M
 Define user function where the cursor is: CTRL + ALT + F
 			")
 }
-
