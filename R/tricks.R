@@ -67,7 +67,7 @@ big.csv <- function(location,header=TRUE,stringsAsFactors=FALSE){
 #'@keywords plot
 #'@export
 #'@examples
-#'coolpairs(mtcars[1:4])
+#'cor.pairs(mtcars[1:4])
 
 cor.pairs <- function(x,upper=FALSE){
 	panel.cor <- function(x, y, digits=2, prefix="", cex.cor)
@@ -232,9 +232,6 @@ what  <- function() {
 			"
 	)
 }
-what()
-
-
 
 #'Useful RStudio keyboard shortcuts
 #'@keywords dictionary

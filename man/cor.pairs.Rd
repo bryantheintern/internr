@@ -19,7 +19,7 @@ calculate the correlation for each pair and display the correlation either above
 the main diagonal.
 }
 \examples{
-coolpairs(mtcars[1:4])
+cor.pairs(mtcars[1:4])
 }
 \keyword{plot}
 
