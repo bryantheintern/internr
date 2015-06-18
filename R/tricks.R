@@ -35,7 +35,7 @@ directory<- function(){
 			that may be useful.
 	")
 }
-directory()
+
 #'Make a Big File out of a bunch of tiny ones.
 #'Take a bunch of files of the same format(CSV) from one folder and combine (rbind) them
 #' into one dataframe.
