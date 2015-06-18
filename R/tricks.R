@@ -7,31 +7,31 @@
 
 directory<- function(){
 	cat("
-			big.csv:  Read in a folder of .CSVs and
+			big.csv():  Read in a folder of .CSVs and
 			rbind them into one big data frame.
 			---------------------------------------
-			cor.pairs:  Make a pairs plot but with
+			cor.pairs():  Make a pairs plot but with
 			the corresponding correlations shown.
 			---------------------------------------
 			%not in%:  Opposite of %in%. Test if
 			something is in something else or not.
 			---------------------------------------
-			mode:  Find the number of the highest
+			mode():  Find the number of the highest
 			frequency.
 			---------------------------------------
-			big.xlsx:  Same as big.csv but for .xlsx
+			big.xlsx():  Same as big.csv but for .xlsx
 			files. Also gives option to write
 			resulting data frame into a .CSV.
 			---------------------------------------
-			noNA:  Remove NAs from a data frame,
+			noNA():  Remove NAs from a data frame,
 			either by replacing them with '0's or
 			by deleting rows.
 			---------------------------------------
-			what:  List of code chunks that couldn't
+			what():  List of code chunks that couldn't
 			easily be converted into one function or
 			were already one function.
 			---------------------------------------
-			keyboard:  RStudio Keyboard shortcuts
+			keyboard():  RStudio Keyboard shortcuts
 			that may be useful.
 	")
 }
