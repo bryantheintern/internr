@@ -7,8 +7,9 @@
 x \%not in\% table
 }
 \arguments{
-\item{x}{the thing you want to filter out
-table where you want to filter it out of}
+\item{x}{the thing you want to filter out}
+
+\item{table}{where you want to filter it out of}
 }
 \description{
 This function serves the opposite function of %in% since R can't figure out !%in%

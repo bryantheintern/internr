@@ -40,8 +40,8 @@ directory<- function(){
 #'Take a bunch of files of the same format(CSV) from one folder and combine (rbind) them
 #' into one dataframe.
 #' @param location Select folder location where the files are. Make sure those files are the only ones in the folder
-#'  header Do the files have a header? Defaulted to TRUE
-#'  stringsAsFactors Do you want the strings converted to factors? Defaulted to FALSE
+#' @param header Do the files have a header? Defaulted to TRUE
+#' @param stringsAsFactors Do you want the strings converted to factors? Defaulted to FALSE
 #' @keywords files
 #' @export
 #' @examples
@@ -62,7 +62,7 @@ big.csv <- function(location,header=TRUE,stringsAsFactors=FALSE){
 #'calculate the correlation for each pair and display the correlation either above or below
 #'the main diagonal.
 #'@param x dataframe containing variables you want to compare
-#' upper logical defaulted to FALSE. If TRUE, the correlations will be shown in the upper half instead of the lower
+#'@param upper logical defaulted to FALSE. If TRUE, the correlations will be shown in the upper half instead of the lower
 #'@keywords plot
 #'@export
 #'@examples
@@ -89,7 +89,7 @@ cor.pairs <- function(x,upper=FALSE){
 #'This function serves the opposite function of %in% since R can't figure out !%in%
 #'Found on Stack Overflow. Has the same syntax as %in% (See ?match)
 #'@param x the thing you want to filter out
-#' table where you want to filter it out of
+#'@param table where you want to filter it out of
 #'@keywords filter
 #'@export
 #'@examples
@@ -115,8 +115,8 @@ mode <- function(x){
 
 #'Read in a bunch of .xlsx files and spit out a csv
 #'@param inpath Where is the folder you want to pull the files from? Make sure they have the same columns and there is nothing extra in the folder
-#' out Should the function write out a csv when finished?
-#' outpath If out is TRUE, then where should it be written?
+#'@param out Should the function write out a csv when finished?
+#'@param outpath If out is TRUE, then where should it be written?
 #'@keywords xlsx
 #'@export
 #'@examples
@@ -141,7 +141,7 @@ big.xlsx <- function(inpath, out=TRUE, outpath) {
 
 #' Eliminate NA's
 #' @param df The data frame you want to take the NAs out of.
-#'  zero Do you want to replace the NAs with '0's? Default set to TRUE. If FALSE, then any row containing an NA will be completely removed.
+#' @param zero Do you want to replace the NAs with '0's? Default set to TRUE. If FALSE, then any row containing an NA will be completely removed.
 #' @keywords NA
 #' @export
 #' @examples
