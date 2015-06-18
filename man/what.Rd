@@ -6,6 +6,9 @@
 \usage{
 what()
 }
+\arguments{
+\item{None}{}
+}
 \description{
 Reminders of useful code that couldn't easily be written into functions or were already only one function.
 }

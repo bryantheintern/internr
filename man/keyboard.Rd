@@ -6,6 +6,9 @@
 \usage{
 keyboard()
 }
+\arguments{
+\item{None}{}
+}
 \description{
 Useful RStudio keyboard shortcuts
 }

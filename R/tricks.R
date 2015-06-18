@@ -166,6 +166,7 @@ noNA  <- function(df,zero=TRUE){
 
 #'Reminders of useful code that couldn't easily be written into functions or were already only one function.
 #'@keywords dictionary
+#'@param None
 #'@export
 #'@examples
 #'
@@ -218,6 +219,7 @@ what  <- function() {
 
 #'Useful RStudio keyboard shortcuts
 #'@keywords dictionary
+#'@param None
 #'@export
 #'@examples
 #'
