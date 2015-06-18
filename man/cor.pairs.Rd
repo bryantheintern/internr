@@ -9,9 +9,9 @@ the main diagonal.}
 cor.pairs(x, upper = FALSE)
 }
 \arguments{
-\item{x}{dataframe containing variables you want to compare}
+\item{x}{Dataframe containing variables you want to compare}
 
-\item{upper}{logical defaulted to FALSE. If TRUE, the correlations will be shown in the upper half instead of the lower}
+\item{upper}{Logical defaulted to FALSE. If TRUE, the correlations will be shown in the upper half instead of the lower}
 }
 \description{
 Generate Pairs plot, except instead of giving a scatterplot above and below the main diagonal,

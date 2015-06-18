@@ -1,5 +1,5 @@
 #'Directory
-#'@keywords directory
+#'@keywords Directory
 #'@export
 #'@examples
 #'directory()
@@ -36,6 +36,7 @@ directory<- function(){
 	")
 }
 
+
 #'Make a Big File out of a bunch of tiny ones.
 #'Take a bunch of files of the same format(CSV) from one folder and combine (rbind) them
 #' into one dataframe.
@@ -61,8 +62,8 @@ big.csv <- function(location,header=TRUE,stringsAsFactors=FALSE){
 #'Generate Pairs plot, except instead of giving a scatterplot above and below the main diagonal,
 #'calculate the correlation for each pair and display the correlation either above or below
 #'the main diagonal.
-#'@param x dataframe containing variables you want to compare
-#'@param upper logical defaulted to FALSE. If TRUE, the correlations will be shown in the upper half instead of the lower
+#'@param x Dataframe containing variables you want to compare
+#'@param upper Logical defaulted to FALSE. If TRUE, the correlations will be shown in the upper half instead of the lower
 #'@keywords plot
 #'@export
 #'@examples
@@ -88,8 +89,8 @@ cor.pairs <- function(x,upper=FALSE){
 #'
 #'This function serves the opposite function of %in% since R can't figure out !%in%
 #'Found on Stack Overflow. Has the same syntax as %in% (See ?match)
-#'@param x the thing you want to filter out
-#'@param table where you want to filter it out of
+#'@param x The thing you want to filter out
+#'@param table Where you want to filter it out of
 #'@keywords filter
 #'@export
 #'@examples
@@ -100,18 +101,22 @@ cor.pairs <- function(x,upper=FALSE){
 '%not in%' <- function (x,table) is.na(match(x,table,nomatch=NA_integer_))
 
 
-#'Mode function: find the mode of a set, functions just like mean or sum functions
-#'@param x the list of things you want to find the mode of.
+#'Mode function: find the mode of a set, works just like mean or sum functions
+#'@param x The list of things you want to find the mode of.
 #'@keywords stats
 #'@export
 #'@examples
 #'
-#'mode(c(1,4,2,5,7,6,45,8,9,8,6,5,4,6,67,7,4,2,4,65,6))
+#' mode(c(1,4,2,5,7,6,45,8,9,8,6,5,4,6,67,7,4,2,4,65,6,"a"))
+#' mode(c(TRUE, TRUE, FALSE, TRUE, TRUE, FALSE, FALSE, FALSE, FALSE, TRUE, TRUE))
 
 mode <- function(x){
+
+	if (class(x)  == "numeric"){
 	as.numeric(names(sort(-table(x))) [1])
 }
-
+else {names(sort(-table(x)))[1]}
+}
 
 #'Read in a bunch of .xlsx files and spit out a csv
 #'@param inpath Where is the folder you want to pull the files from? Make sure they have the same columns and there is nothing extra in the folder
@@ -174,9 +179,11 @@ noNA  <- function(df,zero=TRUE){
 
 what  <- function() {
 	cat("
-			Normality Plot: If line is relatively straight, then the data is normal.
+			Normality Plot: If line is relatively
+			straight, then the data is normal.
 
 			qqplot(rstudent(model))\n
+			------------------------------------------------
 			------------------------------------------------
 			Time taken: Insert at beginning and end of code.
 
@@ -185,15 +192,19 @@ what  <- function() {
 			end.time <- Sys.time()
 			time.taken <- end.time - start.time\n
 			------------------------------------------------
+			------------------------------------------------
 			Left and Right Excel Equivalents:
-
+			library(stringr)
 			L <- str_sub(MyData$V4,1,4)
 			R <- str_sub(MyData$V4,-4,-1)\n
 			------------------------------------------------
+			------------------------------------------------
 			Convert dates into the standard R Date format:
 
-			The format argument should reflect the *starting format* of the date.
 			Date <- as.Date(Date,format=\"%m/%d/%Y\")\n
+			NOTE: The format argument should reflect
+			the *starting format* of the date.
+			------------------------------------------------
 			------------------------------------------------
 			Save and Load RDS:
 
@@ -203,11 +214,17 @@ what  <- function() {
 			## Load the object
 			v2 <- readRDS(\"BOHAdj.rds\")
 			------------------------------------------------
+			------------------------------------------------
 			Concatenate columns to create Unique ID:
 
 			library(stringr)
-			df$Unique.ID <- with(df,(str_c(Date, Store, Catalog, Base.GTIN.Number, character(0))))
+			df$Unique.ID <- with(df,
+													 (str_c(Date,
+													 			 Store,
+													 			 Catalog,
+													 			 Base.GTIN.Number))
 
+			------------------------------------------------
 			------------------------------------------------
 			Convert to data.frame
 
@@ -215,6 +232,8 @@ what  <- function() {
 			"
 	)
 }
+what()
+
 
 
 #'Useful RStudio keyboard shortcuts
@@ -229,14 +248,23 @@ what  <- function() {
 keyboard <- function() {
 	cat("
 Move Cursor to Script: CTRL + 1
+			------------------------------------------------
 Move Cursor to Console: CTRL + 2
+			------------------------------------------------
 Fold current selection to make room: ALT + L
+			------------------------------------------------
 Fix messy indents in your code: CTRL + I
+			------------------------------------------------
 Move selection (or current line): Alt+ Up/Down
+			------------------------------------------------
 Use selection for find: Select something, CTRL + F3
+			------------------------------------------------
 Get list of R's guesses of how to finish a word: TAB
+			------------------------------------------------
 Insert \" <- \": ALT + -
+			------------------------------------------------
 Insert \"%>%\": CTRL + SHIFT + M
+			------------------------------------------------
 Define user function where the cursor is: CTRL + ALT + F
 			")
 }

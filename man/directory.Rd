@@ -12,5 +12,5 @@ Directory
 \examples{
 directory()
 }
-\keyword{directory}
+\keyword{Directory}
 

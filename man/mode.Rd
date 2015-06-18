@@ -2,18 +2,19 @@
 % Please edit documentation in R/tricks.R
 \name{mode}
 \alias{mode}
-\title{Mode function: find the mode of a set, functions just like mean or sum functions}
+\title{Mode function: find the mode of a set, works just like mean or sum functions}
 \usage{
 mode(x)
 }
 \arguments{
-\item{x}{the list of things you want to find the mode of.}
+\item{x}{The list of things you want to find the mode of.}
 }
 \description{
-Mode function: find the mode of a set, functions just like mean or sum functions
+Mode function: find the mode of a set, works just like mean or sum functions
 }
 \examples{
-mode(c(1,4,2,5,7,6,45,8,9,8,6,5,4,6,67,7,4,2,4,65,6))
+mode(c(1,4,2,5,7,6,45,8,9,8,6,5,4,6,67,7,4,2,4,65,6,"a"))
+mode(c(TRUE, TRUE, FALSE, TRUE, TRUE, FALSE, FALSE, FALSE, FALSE, TRUE, TRUE))
 }
 \keyword{stats}
 
