@@ -31,7 +31,8 @@ directory<- function(){
 			easily be converted into one function or
 			were already one function.
 			---------------------------------------
-			keyboard RStudio Keyboard shortcuts that may be useful.
+			keyboard:  RStudio Keyboard shortcuts
+			that may be useful.
 	")
 }
 directory()
