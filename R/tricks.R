@@ -7,30 +7,40 @@
 
 directory<- function(){
 	cat("
-			big.csv:  Read in a folder of .CSVs and rbind them into one big data frame.
+			big.csv:  Read in a folder of .CSVs and
+			rbind them into one big data frame.
 			---------------------------------------
-			cor.pairs Make a pairs plot but with the corresponding correlations shown.
+			cor.pairs:  Make a pairs plot but with
+			the corresponding correlations shown.
 			---------------------------------------
-			%not in% Opposite of %in%. Test if something is in something else or not.
+			%not in%:  Opposite of %in%. Test if
+			something is in something else or not.
 			---------------------------------------
-			mode Find the number of the highest frequency.
+			mode:  Find the number of the highest
+			frequency.
 			---------------------------------------
-			big.xlsx Same as big.csv but for .xlsx files. Also gives option to write resulting data frame into a .CSV.
+			big.xlsx:  Same as big.csv but for .xlsx
+			files. Also gives option to write
+			resulting data frame into a .CSV.
 			---------------------------------------
-			noNA Remove NAs from a data frame, either by replacing them with '0's or by deleting rows.
+			noNA:  Remove NAs from a data frame,
+			either by replacing them with '0's or
+			by deleting rows.
 			---------------------------------------
-			what List of code chunks that couldn't easily be converted into one function or were already one function.
+			what:  List of code chunks that couldn't
+			easily be converted into one function or
+			were already one function.
 			---------------------------------------
 			keyboard RStudio Keyboard shortcuts that may be useful.
 	")
 }
-
+directory()
 #'Make a Big File out of a bunch of tiny ones.
 #'Take a bunch of files of the same format(CSV) from one folder and combine (rbind) them
 #' into one dataframe.
 #' @param location Select folder location where the files are. Make sure those files are the only ones in the folder
-#' @param header Do the files have a header? Defaulted to TRUE
-#' @param stringsAsFactors Do you want the strings converted to factors? Defaulted to FALSE
+#'  header Do the files have a header? Defaulted to TRUE
+#'  stringsAsFactors Do you want the strings converted to factors? Defaulted to FALSE
 #' @keywords files
 #' @export
 #' @examples
@@ -51,7 +61,7 @@ big.csv <- function(location,header=TRUE,stringsAsFactors=FALSE){
 #'calculate the correlation for each pair and display the correlation either above or below
 #'the main diagonal.
 #'@param x dataframe containing variables you want to compare
-#'@param upper logical defaulted to FALSE. If TRUE, the correlations will be shown in the upper half instead of the lower
+#' upper logical defaulted to FALSE. If TRUE, the correlations will be shown in the upper half instead of the lower
 #'@keywords plot
 #'@export
 #'@examples
@@ -78,7 +88,7 @@ cor.pairs <- function(x,upper=FALSE){
 #'This function serves the opposite function of %in% since R can't figure out !%in%
 #'Found on Stack Overflow. Has the same syntax as %in% (See ?match)
 #'@param x the thing you want to filter out
-#'@param table where you want to filter it out of
+#' table where you want to filter it out of
 #'@keywords filter
 #'@export
 #'@examples
@@ -104,8 +114,8 @@ mode <- function(x){
 
 #'Read in a bunch of .xlsx files and spit out a csv
 #'@param inpath Where is the folder you want to pull the files from? Make sure they have the same columns and there is nothing extra in the folder
-#'@param out Should the function write out a csv when finished?
-#'@param outpath If out is TRUE, then where should it be written?
+#' out Should the function write out a csv when finished?
+#' outpath If out is TRUE, then where should it be written?
 #'@keywords xlsx
 #'@export
 #'@examples
@@ -130,7 +140,7 @@ big.xlsx <- function(inpath, out=TRUE, outpath) {
 
 #' Eliminate NA's
 #' @param df The data frame you want to take the NAs out of.
-#' @param zero Do you want to replace the NAs with '0's? Default set to TRUE. If FALSE, then any row containing an NA will be completely removed.
+#'  zero Do you want to replace the NAs with '0's? Default set to TRUE. If FALSE, then any row containing an NA will be completely removed.
 #' @keywords NA
 #' @export
 #' @examples

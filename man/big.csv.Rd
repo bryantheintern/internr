@@ -9,11 +9,9 @@ into one dataframe.}
 big.csv(location, header = TRUE, stringsAsFactors = FALSE)
 }
 \arguments{
-\item{location}{Select folder location where the files are. Make sure those files are the only ones in the folder}
-
-\item{header}{Do the files have a header? Defaulted to TRUE}
-
-\item{stringsAsFactors}{Do you want the strings converted to factors? Defaulted to FALSE}
+\item{location}{Select folder location where the files are. Make sure those files are the only ones in the folder
+header Do the files have a header? Defaulted to TRUE
+stringsAsFactors Do you want the strings converted to factors? Defaulted to FALSE}
 }
 \description{
 Make a Big File out of a bunch of tiny ones.

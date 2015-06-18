@@ -7,9 +7,8 @@
 noNA(df, zero = TRUE)
 }
 \arguments{
-\item{df}{The data frame you want to take the NAs out of.}
-
-\item{zero}{Do you want to replace the NAs with '0's? Default set to TRUE. If FALSE, then any row containing an NA will be completely removed.}
+\item{df}{The data frame you want to take the NAs out of.
+zero Do you want to replace the NAs with '0's? Default set to TRUE. If FALSE, then any row containing an NA will be completely removed.}
 }
 \description{
 Eliminate NA's
