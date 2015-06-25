@@ -115,8 +115,13 @@ mode <- function(x){
 	if (class(x)  == "numeric"){
 	as.numeric(names(sort(-table(x))) [1])
 }
+else if (class(x) == "integer") {
+	as.integer(names(sort(-table(x))) [1])
+}
 else {names(sort(-table(x)))[1]}
 }
+
+
 
 #'Read in a bunch of .xlsx files and spit out a csv
 #'@param inpath Where is the folder you want to pull the files from? Make sure they have the same columns and there is nothing extra in the folder
