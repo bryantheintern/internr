@@ -267,19 +267,3 @@ Define user function where the cursor is: CTRL + ALT + F
 }
 
 
-#'Stupid print function that doesn't do anything. I just needed to test adding a function to the package
-#'@keywords cat
-#'@param None
-#'@export
-#'@examples
-#'
-#'pringle(c("cat",2))
-
-
-pringle <- function(string){
-
-	cat(string)
-}
-
-
-
