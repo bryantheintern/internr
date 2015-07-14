@@ -113,12 +113,12 @@ cor.pairs <- function(x,upper=FALSE){
 mode <- function(x){
 
 	if (class(x)  == "numeric"){
-	as.numeric(names(sort(-table(x))) [1])
-}
-else if (class(x) == "integer") {
-	as.integer(names(sort(-table(x))) [1])
-}
-else {names(sort(-table(x)))[1]}
+		as.numeric(names(sort(-table(x))) [1])
+	}
+	else if (class(x) == "integer") {
+		as.integer(names(sort(-table(x))) [1])
+	}
+	else {names(sort(-table(x)))[1]}
 }
 
 
@@ -144,7 +144,7 @@ big.xlsx <- function(inpath, out=TRUE, outpath) {
 		write.csv(v,outpath)
 	}
 	else{v<- do.call(rbind,z)
-			 v}
+	v}
 }
 
 
@@ -185,6 +185,7 @@ noNA  <- function(df,zero=TRUE){
 #'
 
 moreCores <- function(code,all.but = 0){
+	require(doParallel)
 	if(all.but < detectCores()){
 		dc <- detectCores()-all.but
 		cl <- makeCluster(dc)
@@ -194,8 +195,6 @@ moreCores <- function(code,all.but = 0){
 	}
 	else {stop("You don't have enough cores")}
 }
-
-
 
 
 #'Reminders of useful code that couldn't easily be written into functions or were already only one function.
