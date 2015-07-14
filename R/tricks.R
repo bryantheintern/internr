@@ -172,6 +172,30 @@ noNA  <- function(df,zero=TRUE){
 	df
 }
 
+#' Take a time-heavy chunk of code that is parallelizable and speed it up.
+#'@keywords parallel
+#'@param code The code you want to execute
+#'@param all.but How many cores do you want to exclude from this process? Defaults to 0.
+#'@export
+#'@examples
+#'
+#'y <- numeric(10000000)
+#'moreCores(for (i in 1:10000000) {y[i] <- i*(i+1)*(i-1)*(i+2)})
+#'y
+#'
+
+moreCores <- function(code,all.but = 0){
+	if(all.but < detectCores()){
+		dc <- detectCores()-all.but
+		cl <- makeCluster(dc)
+		registerDoParallel(cl)
+		code
+		suppressWarnings(stopCluster(cl))
+	}
+	else {stop("You don't have enough cores")}
+}
+
+
 
 
 #'Reminders of useful code that couldn't easily be written into functions or were already only one function.
