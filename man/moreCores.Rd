@@ -4,7 +4,7 @@
 \alias{moreCores}
 \title{Take a time-heavy chunk of code that is parallelizable and speed it up.}
 \usage{
-moreCores(code, all.but = 0)
+moreCores(code, all.but = 1)
 }
 \arguments{
 \item{code}{The code you want to execute}

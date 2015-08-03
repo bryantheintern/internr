@@ -12,8 +12,8 @@ x \%not in\% table
 \item{table}{Where you want to filter it out of}
 }
 \description{
-This function serves the opposite function of %in% since R can't figure out !%in%
-Found on Stack Overflow. Has the same syntax as %in% (See ?match)
+This function serves the opposite function of '%in%' since R can't figure out '!%in%'
+Found on Stack Overflow. Has the same syntax as '%in%' (See ?match)
 }
 \examples{
 5 \%not in\% c(1,2,3,4,5)
