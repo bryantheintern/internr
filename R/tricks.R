@@ -188,6 +188,43 @@ moreCores <- function(code,all.but = 1){
 	else {stop("You don't have enough cores")}
 }
 
+
+#' Reverse character strings
+#'
+#' I honestly don't know what you'd use this for.
+#'
+#' @keywords character
+#' @param text The text you want to reverse
+#' @export
+#' @examples
+#' reverse("Go Hang a Salami, I'm a Lasagna Hog")
+#'
+#' reverse(525600)
+#'
+#'
+
+
+reverse <- function(text) {
+	if (is.character(text) == FALSE) {
+		text <- as.character(text)
+		x <- character(nchar(text))
+		for (i in nchar(text):1) {
+			x[nchar(text) + 1 - i] <- substr(text,i,i)
+		}
+		as.numeric(paste0(x,collapse = ""))
+	} else {
+		text <- as.character(text)
+		x <- character(nchar(text))
+		for (i in nchar(text):1) {
+			x[nchar(text) + 1 - i] <- substr(text,i,i)
+		}
+		paste0(x,collapse = "")
+
+	}
+}
+class("hello")
+reverse(17.01)
+
 #'Reminders of useful code that couldn't easily be written into functions or were already only one function.
 #'@keywords dictionary
 #'@param None
