@@ -188,9 +188,6 @@ moreCores <- function(code,all.but = 1){
 	else {stop("You don't have enough cores")}
 }
 
-
-
-
 #'Reminders of useful code that couldn't easily be written into functions or were already only one function.
 #'@keywords dictionary
 #'@param None
