@@ -80,15 +80,15 @@ cor.pairs <- function(x,upper = FALSE){
 		if (missing(cex.cor)) cex <- 0.8/strwidth(txt)
 		text(0.5, 0.5, txt, cex = cex * abs(r))
 	}
-	if (upper == FALSE) pairs(x, lower.panel=panel.cor)
+	if (upper == FALSE) pairs(x, lower.panel = panel.cor)
 	else pairs(x,upper.panel = panel.cor)
 }
 
 
 #'Not In
 #'
-#'This function serves the opposite function of '%in%' since R can't figure out '!%in%'
-#'Found on Stack Overflow. Has the same syntax as '%in%' (See ?match)
+#'This function serves the opposite function of \%in\% since R can't figure out '!%in%'
+#'Found on Stack Overflow. Has the same syntax as \%in\% (See ?match)
 #'@param x The thing you want to filter out
 #'@param table Where you want to filter it out of
 #'@keywords filter
