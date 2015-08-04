@@ -2,7 +2,7 @@
 % Please edit documentation in R/tricks.R
 \name{reverse}
 \alias{reverse}
-\title{Reverse character strings}
+\title{Reverse character strings or numbers}
 \usage{
 reverse(text)
 }

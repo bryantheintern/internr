@@ -189,7 +189,7 @@ moreCores <- function(code,all.but = 1){
 }
 
 
-#' Reverse character strings
+#' Reverse character strings or numbers
 #'
 #' I honestly don't know what you'd use this for.
 #'
@@ -219,11 +219,9 @@ reverse <- function(text) {
 			x[nchar(text) + 1 - i] <- substr(text,i,i)
 		}
 		paste0(x,collapse = "")
-
 	}
 }
-class("hello")
-reverse(17.01)
+
 
 #'Reminders of useful code that couldn't easily be written into functions or were already only one function.
 #'@keywords dictionary
