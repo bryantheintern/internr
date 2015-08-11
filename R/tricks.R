@@ -27,6 +27,12 @@ directory <- function(){
 			either by replacing them with '0's or
 			by deleting rows.
 			---------------------------------------
+			moreCores():  Dedicate multiple cores of
+			your computer to a parallelizable function.
+			---------------------------------------
+			reverse():  Switch the order of a number
+			or text string.
+			---------------------------------------
 			what():  List of code chunks that couldn't
 			easily be converted into one function or
 			were already one function.
@@ -43,7 +49,7 @@ directory <- function(){
 #' @param location Select folder location where the files are. Make sure those files are the only ones in the folder
 #' @param header Do the files have a header? Defaulted to TRUE
 #' @param stringsAsFactors Do you want the strings converted to factors? Defaulted to FALSE
-#' @keywords files
+#' @keywords file
 #' @export
 #' @examples
 #' big.csv("S:\\Key Retailing\\Active Projects and Teams\\Order Evolution\\Intern\\Bryan\\Movement Data")

@@ -23,5 +23,5 @@ into one dataframe.
 \examples{
 big.csv("S:\\\\Key Retailing\\\\Active Projects and Teams\\\\Order Evolution\\\\Intern\\\\Bryan\\\\Movement Data")
 }
-\keyword{files}
+\keyword{file}
 
